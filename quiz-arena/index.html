@@ -389,7 +389,9 @@
 
 <script>
 // ─── WebSocket ────────────────────────────────────────────────────────────
-const WS_URL = `ws://${location.host}`;
+const WS_URL = location.protocol === 'https:' 
+  ? `wss://${location.host}` 
+  : `ws://${location.host}`;
 let ws = null;
 let reconnectTimeout = null;
 
