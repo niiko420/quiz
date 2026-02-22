@@ -8,7 +8,7 @@ const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // ─── HTTP server per servire il frontend ───────────────────────────────────
 const httpServer = http.createServer((req, res) => {
